@@ -1,4 +1,170 @@
+main,
+article,
+header,
+footer,
+nav {
+    padding: 5px;
+}
+
 body {
-    color: red;
-    background: lightblue;
+    background-image: url("Kepek/karacsony.jpg");
+}
+
+main {
+    width: 1200px;
+    display: grid;
+    margin: auto;
+    text-align: justify;
+    grid-template-columns: 150px auto auto auto;
+    grid-template-areas: "h h h h" "n a a as" "f f f f";
+}
+
+aside {
+    grid-area: as;
+    background-color: tomato;
+}
+
+p {
+    padding: 10px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h2 {
+    clear: both;
+    font-size: 15px;
+}
+
+caption {
+    font-size: 20px;
+}
+
+aside {
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: 4px solid #2A2A2A;
+    color: #FFFFFF;
+}
+
+header {
+    grid-area: h;
+    background-image: url("kepek/karacs.jpg");
+    font-family: "Lucida Handwriting", "Courier New", monospace;
+    border: solid 1px red;
+    height: 150px;
+    font-family: "Parisienne", cursive;
+}
+
+header h1 {
+    padding-top: 110px;
+    font-size: 15px;
+}
+
+footer {
+    grid-area: f;
+    background-color: blanchedalmond;
+    text-align: center;
+}
+
+a:hover {
+    padding-left: 15px;
+    background-image: url("kepek/ejj.jpg");
+}
+
+nav {
+    grid-area: n;
+    background-color: grey;
+}
+
+article {
+    grid-area: a;
+    background-color: white;
+}
+
+ul {
+    font-family: Arial, Verdana;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-radius: 10px 140px 30px 140px;
+}
+
+ul li {
+    display: block;
+    position: relative;
+    float: left;
+    border-radius: 10px 140px 30px 140px;
+}
+
+li ul {
+    display: none;
+    border-radius: 10px 140px 30px 140px;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    border-top: 1px solid #ffffff;
+    padding: 5px 15px 5px 15px;
+    background: #2C5463;
+    margin-left: 1px;
+    white-space: nowrap;
+    border-radius: 10px 140px 30px 140px;
+}
+
+ul li a:hover {
+    background: #617F8A;
+    border-radius: 10px 140px 30px 140px;
+}
+
+li:hover ul {
+    display: block;
+    position: absolute;
+}
+
+li:hover li {
+    float: none;
+    font-size: 11px;
+}
+
+li:hover a {
+    background: #617F8A;
+}
+
+li:hover li a:hover {
+    background: #95A9B1;
+    border-radius: 10px 140px 30px 140px;
+}
+
+section {
+    display: grid | inline-grid;
+    grid-template-columns: auto;
+}
+
+footer {
+    margin: 17px
+}
+
+h1 {
+    margin-top: 10px;
+}
+
+@media screen and (max-width:600px) {
+    main {
+        grid-template-columns: auto;
+        grid-template-areas: "h" "n" "a" "f";
+    }
 }
